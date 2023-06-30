@@ -1,6 +1,6 @@
 #include "Employee.h"
 
-double Employee::getHealthCareContributions()
+const double Employee::getHealthCareContributions()
 {
 	return healthCareContributions;
 }

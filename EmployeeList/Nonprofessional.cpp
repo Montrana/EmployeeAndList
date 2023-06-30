@@ -2,17 +2,17 @@
 
 Nonprofessional::Nonprofessional(double hours, double hourlyPay, double healthcareRate, double vacaRate)
 {
-	weeklyPay = hours * hourlyPay;
-	healthCareContributions = weeklyPay * healthcareRate;
-	vacationHours = hours * vacaRate;
+	pay = hours * hourlyPay;
+	healthCareContributions = pay * healthcareRate;
+	vacationTime = hours * vacaRate;
 }
 
-double Nonprofessional::getPay()
+const double Nonprofessional::getPay()
 {
-	return weeklyPay;
+	return pay;
 }
 
-double Nonprofessional::getVacationTime()
+const double Nonprofessional::getVacationTime()
 {
-	return vacationHours;
+	return vacationTime;
 }

@@ -2,18 +2,18 @@
 
 Professional::Professional(double sal, double healthcareRate, double vacaDays)
 {
-	salary = sal;
-	healthCareContributions = salary * healthcareRate;
-	vacationHours = vacaDays * 8;
+	pay = sal;
+	healthCareContributions = (pay / 12) * healthcareRate;
+	vacationTime = vacaDays;
 }
 
-double Professional::getPay()
+const double Professional::getPay()
 {
-	return salary/12;
+	return pay/12;
 }
 
-double Professional::getVacationTime()
+const double Professional::getVacationTime()
 {
-	return vacationHours/8;
+	return vacationTime;
 }
 

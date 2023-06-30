@@ -2,11 +2,16 @@
 class Employee
 {
 protected:
-	double vacationHours;
+	double pay;
+	double vacationTime;
 	double healthCareContributions;
 public:
-	virtual double getPay() = 0;
-	virtual double getVacationTime() = 0;
-	virtual double getHealthCareContributions();
+	virtual const double getPay() = 0;
+	virtual const double getVacationTime() = 0;
+	/// <summary>
+	/// Gets the healthcare contributions on a paycheck basis
+	/// </summary>
+	/// <returns>healthcare contributions</returns>
+	virtual const double getHealthCareContributions();
 };
 

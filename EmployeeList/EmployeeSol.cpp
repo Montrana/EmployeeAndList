@@ -1,20 +1,25 @@
 // EmployeeSol.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+// Name: Montana Nicholson
+// Date: June 23, 2023
+// This is an example of inheritance using two types of employees.
 
 #include <iostream>
+#include "Employee.h"
+#include "Nonprofessional.h"
+#include "Professional.h"
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    Nonprofessional jack = Nonprofessional(35, 12, .05, .38);
+    cout << "Jack (non professional):\n";
+    cout << "Pay Per Week: " << jack.getPay() << endl;
+    cout << "Health care contributions on paycheck: " << jack.getHealthCareContributions() << endl;
+    cout << "Vacation hours earned per week: " << jack.getVacationTime() << endl;
+
+    Professional emily = Professional(60000, .1, 15);
+    cout << "Emily (professional):\n";
+    cout << "Pay Per Month: " << emily.getPay() << endl;
+    cout << "Health care contributions on paycheck: " << emily.getHealthCareContributions() << endl;
+    cout << "Yearly vacation days: " << emily.getVacationTime();
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
